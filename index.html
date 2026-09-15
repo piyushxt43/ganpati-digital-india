@@ -1,0 +1,313 @@
+<title>Ganpati Bappa Digital India</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Mukta:wght@300;400;600;700;800&display=swap">
+<style>
+  :root{
+    --sand:#EFE6D8;
+    --sand-2:#F7F1E7;
+    --ink:#15213F;
+    --ink-soft:#4A5470;
+    --marigold:#E05A15;
+    --kumkum:#B3123A;
+    --peacock:#15694A;
+    --line:rgba(21,33,63,.14);
+    --card:#FBF7F0;
+    --shadow:0 1px 0 rgba(21,33,63,.06), 0 12px 28px -18px rgba(21,33,63,.5);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --sand:#14110D;
+      --sand-2:#1C1814;
+      --ink:#F2E9DC;
+      --ink-soft:#B6A897;
+      --marigold:#FF8A3D;
+      --kumkum:#FF5E86;
+      --peacock:#4FCB95;
+      --line:rgba(242,233,220,.16);
+      --card:#211C17;
+      --shadow:0 1px 0 rgba(0,0,0,.4), 0 12px 28px -18px #000;
+    }
+  }
+  :root[data-theme="dark"]{
+    --sand:#14110D;
+    --sand-2:#1C1814;
+    --ink:#F2E9DC;
+    --ink-soft:#B6A897;
+    --marigold:#FF8A3D;
+    --kumkum:#FF5E86;
+    --peacock:#4FCB95;
+    --line:rgba(242,233,220,.16);
+    --card:#211C17;
+    --shadow:0 1px 0 rgba(0,0,0,.4), 0 12px 28px -18px #000;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    background:var(--sand);
+    color:var(--ink);
+    font-family:"Mukta",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    font-size:17px;
+    line-height:1.65;
+    padding-block:0;
+    padding-left:20px;
+    padding-right:20px;
+  }
+  .wrap{max-width:760px;margin:0 auto}
+  h1,h2,h3{font-family:"Yatra One","Mukta",serif;font-weight:400;text-wrap:balance;line-height:1.2;margin:0}
+  p{margin:0}
+  a{color:inherit}
+
+  /* kolam dot rail — the dotted grid a rangoli is drawn on */
+  .dots{
+    height:14px;
+    background-image:radial-gradient(circle, var(--marigold) 1.6px, transparent 1.7px);
+    background-size:16px 14px;
+    opacity:.55;
+  }
+
+  header{padding-block:34px 8px;text-align:center}
+  .eyebrow{
+    font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+    font-weight:700;color:var(--peacock);
+  }
+  h1{font-size:clamp(34px,8vw,58px);margin-top:10px;color:var(--kumkum)}
+  h1 .en{display:block;font-size:clamp(20px,4.6vw,30px);color:var(--ink);margin-top:6px}
+
+  .shlok{
+    margin:26px auto 0;max-width:34ch;
+    font-size:clamp(16px,3.6vw,19px);line-height:2;
+    color:var(--ink-soft);text-align:center;
+  }
+
+  figure{margin:32px 0 0;text-align:center}
+  .frame{
+    display:inline-block;padding:14px;border-radius:18px;
+    background:var(--card);box-shadow:var(--shadow);
+    border:1px solid var(--line);
+  }
+  .frame img{display:block;max-width:100%;height:auto;border-radius:8px}
+  figcaption{
+    margin-top:14px;font-size:14px;color:var(--ink-soft);
+    letter-spacing:.04em;
+  }
+
+  .lede{
+    margin-top:34px;font-size:clamp(18px,4vw,21px);line-height:1.7;
+  }
+  .lede strong{color:var(--marigold)}
+
+  section{padding-block:40px}
+  .rule{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+  .rule::before,.rule::after{content:"";height:1px;background:var(--line);flex:1}
+  .rule span{
+    font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+    font-weight:700;color:var(--marigold);white-space:nowrap;
+  }
+
+  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  @media (max-width:560px){.cards{grid-template-columns:1fr}}
+  .card{
+    display:flex;flex-direction:column;gap:6px;
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:18px 18px 16px;text-decoration:none;
+    box-shadow:var(--shadow);
+    transition:transform .18s ease, border-color .18s ease;
+  }
+  .card:hover,.card:focus-visible{transform:translateY(-3px);border-color:var(--marigold)}
+  .card .glyph{font-size:24px;line-height:1}
+  .card h3{font-size:20px;color:var(--ink)}
+  .card .hi{font-size:14px;color:var(--peacock);font-weight:600;margin-top:-4px}
+  .card p{font-size:15px;color:var(--ink-soft);line-height:1.55}
+  .card .go{
+    margin-top:6px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    font-weight:700;color:var(--marigold);
+  }
+  :focus-visible{outline:2px solid var(--kumkum);outline-offset:3px}
+
+  .life{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;
+    border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--line)}
+  @media (max-width:460px){.life{grid-template-columns:1fr}}
+  .life div{background:var(--card);padding:14px 16px;font-size:15px}
+  .life b{display:block;font-weight:700;color:var(--ink)}
+  .life span{color:var(--ink-soft);font-size:14px}
+
+  .bridge{
+    margin-top:8px;display:grid;grid-template-columns:1fr auto 1fr;
+    align-items:center;gap:16px;text-align:center;
+  }
+  @media (max-width:520px){.bridge{grid-template-columns:1fr;gap:10px}}
+  .bridge .b{padding:18px 12px}
+  .bridge .b .g{font-size:30px}
+  .bridge .b b{display:block;font-family:"Yatra One",serif;font-weight:400;font-size:19px;margin-top:6px}
+  .bridge .b span{font-size:14px;color:var(--ink-soft)}
+  .bridge .arrow{font-size:22px;color:var(--marigold)}
+
+  blockquote{
+    margin:0;padding:26px 24px;border-radius:16px;
+    background:var(--sand-2);border:1px solid var(--line);
+    text-align:center;
+  }
+  blockquote .hi{
+    font-family:"Yatra One",serif;font-size:clamp(20px,4.6vw,26px);
+    line-height:1.7;color:var(--kumkum);
+  }
+  blockquote .en{margin-top:12px;font-size:16px;color:var(--ink-soft)}
+  .pairs{
+    margin-top:18px;display:flex;flex-wrap:wrap;justify-content:center;gap:8px;
+  }
+  .pairs i{
+    font-style:normal;font-size:14px;font-weight:600;
+    padding:5px 12px;border-radius:999px;
+    background:var(--card);border:1px solid var(--line);color:var(--peacock);
+  }
+
+  .blessing{text-align:center;padding-block:44px 8px}
+  .blessing h2{font-size:clamp(28px,6.5vw,42px);color:var(--kumkum)}
+  .blessing ul{list-style:none;padding:0;margin:20px auto 0;max-width:30ch;
+    display:grid;gap:8px;font-size:17px}
+  .blessing .tag{
+    margin-top:26px;font-family:"Yatra One",serif;font-size:clamp(22px,5vw,30px);
+    color:var(--ink);
+  }
+  .blessing .sub{margin-top:6px;font-size:14px;letter-spacing:.16em;
+    text-transform:uppercase;font-weight:700;color:var(--peacock)}
+  footer{padding-block:28px 40px;text-align:center;font-size:13px;color:var(--ink-soft)}
+
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="dots"></div>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Scan · Explore · Experience</div>
+    <h1>गणपती बाप्पा मोरया<span class="en">Digital India 2026</span></h1>
+    <p class="shlok">॥ वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ॥<br>॥ निर्विघ्नं कुरु मे देव शुभकार्येषु सर्वदा ॥</p>
+  </header>
+
+  <figure>
+    <div class="frame"><img src="assets/ganpati-digital-india.jpg" alt="Rangoli of Lord Ganesha working on a laptop, surrounded by BHIM UPI, Wi-Fi, cloud, AI chip and Digital India symbols, with the words Digital India — Sabka Saath, Sabka Vikas and गणपती बाप्पा मोरया."></div>
+    <figcaption>The rangoli this code belongs to — sand, colour, and a country going online.</figcaption>
+  </figure>
+
+  <p class="lede">From a country that once stood in queues for payments and paperwork, to a country where one phone becomes a <strong>bank, an identity, a document wallet, a classroom, a marketplace and a gateway to government services</strong> — India is building a digital ecosystem designed around its citizens.</p>
+
+  <section>
+    <div class="rule"><span>Eight pillars · tap any one</span></div>
+    <div class="cards">
+
+      <a class="card" href="https://www.npci.org.in/what-we-do/upi/product-overview" target="_blank" rel="noopener">
+        <span class="glyph">💳</span>
+        <h3>UPI</h3>
+        <div class="hi">स्कॅन करा. पैसे पाठवा. झालं.</div>
+        <p>Instant bank-to-bank payments, 24×7, through a phone number or a QR code — for person-to-person transfers and for merchants.</p>
+        <span class="go">npci.org.in →</span>
+      </a>
+
+      <a class="card" href="https://uidai.gov.in/" target="_blank" rel="noopener">
+        <span class="glyph">🪪</span>
+        <h3>Aadhaar</h3>
+        <div class="hi">एक ओळख, अनेक दारं</div>
+        <p>A digital identity that has become a foundation of India's digital public infrastructure and of access to services.</p>
+        <span class="go">uidai.gov.in →</span>
+      </a>
+
+      <a class="card" href="https://www.digilocker.gov.in/" target="_blank" rel="noopener">
+        <span class="glyph">📄</span>
+        <h3>DigiLocker</h3>
+        <div class="hi">कागदपत्रं खिशात</div>
+        <p>Authentic digital documents — education, health, transport, skills — issued, stored and shared with your consent. No folder of certificates.</p>
+        <span class="go">digilocker.gov.in →</span>
+      </a>
+
+      <a class="card" href="https://ondc.org/" target="_blank" rel="noopener">
+        <span class="glyph">🛍️</span>
+        <h3>ONDC</h3>
+        <div class="hi">खुला बाजार, सगळ्यांसाठी</div>
+        <p>An open network connecting buyers, sellers and logistics across digital commerce, instead of shoppers being locked inside one app.</p>
+        <span class="go">ondc.org →</span>
+      </a>
+
+      <a class="card" href="https://indiaai.gov.in/" target="_blank" rel="noopener">
+        <span class="glyph">🤖</span>
+        <h3>IndiaAI</h3>
+        <div class="hi">भारताची स्वतःची AI</div>
+        <p>A national mission building compute, datasets, skills, research and startups — the move from a Digital India to an AI-powered one.</p>
+        <span class="go">indiaai.gov.in →</span>
+      </a>
+
+      <a class="card" href="https://bhashini.gov.in/" target="_blank" rel="noopener">
+        <span class="glyph">🗣️</span>
+        <h3>BHASHINI</h3>
+        <div class="hi">तंत्रज्ञान, आपल्या भाषेत</div>
+        <p>The National Language Translation Mission — AI translation and speech so digital services work in the languages India actually speaks.</p>
+        <span class="go">bhashini.gov.in →</span>
+      </a>
+
+      <a class="card" href="https://bbnl.nic.in/" target="_blank" rel="noopener">
+        <span class="glyph">🌐</span>
+        <h3>BharatNet</h3>
+        <div class="hi">गावागावांत नेटवर्क</div>
+        <p>Broadband infrastructure carrying connectivity to gram panchayats. A digital India cannot stop at the edge of the cities.</p>
+        <span class="go">bbnl.nic.in →</span>
+      </a>
+
+      <a class="card" href="https://services.india.gov.in/" target="_blank" rel="noopener">
+        <span class="glyph">🏛️</span>
+        <h3>e-Governance</h3>
+        <div class="hi">सरकार, ऑनलाइन</div>
+        <p>Certificates, licences, filings, welfare schemes — public services delivered online instead of across a counter.</p>
+        <span class="go">services.india.gov.in →</span>
+      </a>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="rule"><span>Where it shows up in a day</span></div>
+    <div class="life">
+      <div><b>🩺 Healthcare</b><span>Digital health records &amp; teleconsultation</span></div>
+      <div><b>🎓 Education</b><span>Online learning and open resources</span></div>
+      <div><b>🌾 Agriculture</b><span>Advisories, markets and payments for farmers</span></div>
+      <div><b>🏦 Banking</b><span>Accounts and credit reaching more people</span></div>
+      <div><b>🛍️ Commerce</b><span>Small sellers on an open network</span></div>
+      <div><b>🏛️ Governance</b><span>Applications and benefits, online</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="rule"><span>Why Ganpati, why a QR code</span></div>
+    <div class="bridge">
+      <div class="b"><div class="g">🪷</div><b>बुद्धी</b><span>Ganesha stands for wisdom</span></div>
+      <div class="arrow">→</div>
+      <div class="b"><div class="g">📱</div><b>शक्यता</b><span>Technology stands for possibility</span></div>
+    </div>
+    <p style="text-align:center;margin-top:8px;color:var(--ink-soft)">Digital India is what happens when the two are put in the same frame. Our traditions tell us where we came from; technology lets us decide where we go next.</p>
+  </section>
+
+  <section>
+    <blockquote>
+      <div class="hi">“भारत बदल रहा है —<br>पर अपनी जड़ों को साथ लेकर।”</div>
+      <div class="en">A digital India is not an India that forgets its traditions.</div>
+      <div class="pairs">
+        <i>संस्कृति + तकनीक</i><i>परंपरा + नवाचार</i><i>ज्ञान + AI</i><i>भारत + भविष्य</i>
+      </div>
+    </blockquote>
+  </section>
+
+  <div class="blessing">
+    <h2>🙏 गणपती बाप्पा मोरया 🙏</h2>
+    <ul>
+      <li>Wisdom to innovate</li>
+      <li>Courage to transform</li>
+      <li>Technology to empower</li>
+      <li>Progress that reaches everyone</li>
+    </ul>
+    <div class="tag">DIGITAL INDIA</div>
+    <div class="sub">Sabka Saath · Sabka Vikas</div>
+  </div>
+
+  <footer>Scanned from a Ganesh Chaturthi rangoli · 2026</footer>
+</div>
+<div class="dots"></div>
