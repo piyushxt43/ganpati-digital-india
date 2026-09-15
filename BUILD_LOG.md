@@ -12,4 +12,9 @@
 4. Installed `qrcode[pil]` (github.com/lincolnloop/python-qrcode) into `.venv`.
 5. Generated QR v6, ECC level H, in 3 formats via `qr/make_qr.py`.
 
-**Open item:** artifact must be shared publicly by the user before the QR is usable by others.
+6. Artifact URL required a Claude login — scanners landed on the Claude homepage. Replaced with
+   public static hosting: wrapped index.html as a standalone document (doctype/head/body, viewport,
+   OG tags), pushed to github.com/piyushxt43/ganpati-digital-india, enabled GitHub Pages.
+7. Regenerated all three QR files against https://piyushxt43.github.io/ganpati-digital-india/ — verified live (page 200, image 200).
+
+**Status:** done. QR scans to a public page, no login.

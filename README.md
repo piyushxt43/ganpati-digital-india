@@ -1,9 +1,9 @@
 # Ganpati Bappa — Digital India QR
 
-**Live page:** https://claude.ai/artifact/Ua3rPhfWRJZtNNJ5U6ANop
+**Live page:** https://piyushxt43.github.io/ganpati-digital-india/
+**Repo:** https://github.com/piyushxt43/ganpati-digital-india
 
-⚠️ The page is **private by default**. Open it, use the page's **Share** menu to make it public,
-then the QR works for anyone. The URL does not change when you share, so the QR stays valid.
+Public static page on GitHub Pages — opens for anyone, no login.
 
 ## Files
 - `index.html` — the landing page source
